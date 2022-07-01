@@ -22,9 +22,32 @@
     </div>
     <div class="outter">
         <div class="top">Made by Albert Porto</div>
-        <div class="screen">Screen</div>
+        <div class="screen">
+            <input type="number" id="screenCal" placeholder="QuickMaths">  
+        </div>
         <div class="topofbutton">Engineering</div>
-        <div class="buttons">Buttons</div>
+        <div class="buttons">
+            <div class="operations">
+                <button onclick="op = 'add'">+</button>
+                <button onclick="op = 'sub'">-</button>
+                <button onclick="op = 'divide'">/</button>
+                <button onclick="op = 'mult'">X</button>
+                <button onclick="clearScreen();">Clear</button>
+            </div>   
+            <div class="digits">
+                <button onclick="typer(1);">1</button>
+                <button onclick="typer(2);">2</button>
+                <button onclick="typer(3);">3</button>
+                <button onclick="typer(4);">4</button>
+                <button onclick="typer(5);">5</button>
+                <button onclick="typer(6);">6</button>
+                <button onclick="typer(7);">7</button>
+                <button onclick="typer(8);">8</button>
+                <button onclick="typer(9);">9</button>
+                <button onclick="typer(0);">0</button>
+                <button onclick="thinker();">=</button>
+            </div> 
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
