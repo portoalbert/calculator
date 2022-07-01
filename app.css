@@ -41,7 +41,7 @@ body {
 .screen {
     background-color: azure;
     width: 447px;
-    height: 100px;
+    min-height: 100px;
     font-size: 50px;
     text-align: end;
     display: flex;
