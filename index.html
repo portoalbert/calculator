@@ -21,18 +21,19 @@
             <img src="img/instagram.jpg" alt="link"></a></div>
     </div>
     <div class="outter">
-        <div class="top">Made by Albert Porto</div>
+        <div class="top">Made by <a href="https://github.com/portoalbert?tab=repositories">Albert Porto</a> </div>
         <div class="screen">
-            <input type="number" id="screenCal" placeholder="QuickMaths">  
+            <div id="argone"> </div>
+            <div id="argtwo"></div>
+            <div id="argthree"></div>
         </div>
         <div class="topofbutton">Engineering</div>
         <div class="buttons">
             <div class="operations">
-                <button onclick="op = 'add'">+</button>
-                <button onclick="op = 'sub'">-</button>
-                <button onclick="op = 'divide'">/</button>
-                <button onclick="op = 'mult'">X</button>
-                <button onclick="clearScreen();">Clear</button>
+                <button onclick="test('+');">+</button>
+                <button onclick="test('-');">-</button>
+                <button onclick="test('/');">/</button>
+                <button onclick="test('x');">x</button>
             </div>   
             <div class="digits">
                 <button onclick="typer(1);">1</button>
@@ -45,6 +46,7 @@
                 <button onclick="typer(8);">8</button>
                 <button onclick="typer(9);">9</button>
                 <button onclick="typer(0);">0</button>
+                <button onclick="clearScreen();">Clear</button>
                 <button onclick="thinker();">=</button>
             </div> 
         </div>

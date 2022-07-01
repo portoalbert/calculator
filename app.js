@@ -1,37 +1,54 @@
-const calcScreen = document.getElementById("screenCal")
+const calcScreen = document.getElementById("argone")
+const calcScreenTwo = document.getElementById("argtwo")
+const calcScreenThree = document.getElementById("argthree")
 let op = "add"
 let termOne = null
 let termTwo = null
 let result = 0
+let currentArg = 1
+let changes = false
 
 let calc = {
-   'add': function(a,b) {return a + b},
-   'sub': function(a,b) {return a - b},
-   'divide': function(a,b) {return a / b},
-   'mult': function(a,b) {return a * b},
+   '+': function(a,b) {return a + b},
+   '-': function(a,b) {return a - b},
+   '/': function(a,b) {return a / b},
+   'x': function(a,b) {return a * b},
 };
 
 function clearScreen () {
-    calcScreen.placeholder = "0"
-    calcScreen.value = ''
+    calcScreen.textContent = ""
+    calcScreenTwo.textContent = ""
+    calcScreenThree.textContent = ""
+    op = ""
+    currentArg = 1
 }
 function typer (a) {
-    calcScreen.value += a
-    result = parseInt(calcScreen.value);
-    console.log(result)
+    changes = true
+    if (currentArg == 1)
+        { 
+        calcScreen.textContent += a
+        return;
+        }
+    else {
+        calcScreenThree.textContent += a
+         }
 }
 function thinker() {
-    if (termOne == null){
-        termOne = parseInt(calcScreen.value);
-        clearScreen();
-        return;
-    }
-    termTwo = parseInt(calcScreen.value);
-    calcScreen.value = calc[op](termOne,termTwo);
-    termOne = parseInt(calcScreen.value);
+    if (currentArg == 1 || changes === false){return;}
+    termOne = parseInt(calcScreen.textContent);
+    termTwo = parseInt(calcScreenThree.textContent);
+    calcScreen.textContent = calc[op](termOne,termTwo);
+    termOne = parseInt(calcScreen.textContent);
     termTwo = null
+    calcScreenThree.textContent = ""
+    calcScreenTwo.textContent = ""
+
+    changes = false
+    if (!Number.isInteger(termOne)){ calcScreen.textContent = "ERROR"}
 }
-function pressOp (a){
+function test(a){
+    if (calcScreenThree !== ""){thinker();}
+    calcScreenTwo.textContent = a
+    currentArg = 3
     op = a
-    
-} 
+}
