@@ -28,7 +28,7 @@ body {
 .outter {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(#666, black);
+    background-color: #666;
     padding: 30px;
     border: 3px solid blue;
     border-radius: 10px;
@@ -82,6 +82,7 @@ body {
     flex-wrap: wrap;
 }
 .digits button {
+    gap: 5px;
     color: white;
     width: 25%;
     aspect-ratio: 1/1;
@@ -108,6 +109,7 @@ body {
     color: white;
   }
   button {
+    border-radius: 10%;
     transition: all .2s ease-in-out;
   }
   button:hover { transform: scale(1.1);}
