@@ -1,7 +1,8 @@
 body {
     margin: 0;
     height: 100vh;
-    background-color: antiquewhite;
+    background-image: url('img/backgroundthree.jpg');
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,16 +28,16 @@ body {
 .outter {
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
+    background-image: linear-gradient(#666, black);
     padding: 30px;
     border: 3px solid blue;
     border-radius: 10px;
 }
 .top {
-    background-color: aquamarine;
     display: flex;
     justify-content: flex-end;
     flex: 1;
+    color: white;
 }
 .screen {
     background-color: azure;
@@ -69,19 +70,23 @@ body {
     justify-content: space-between;
 }
 .operations button {
+    color: white;
     width: 25%;
     aspect-ratio: 1/1;
     font-size: 30px;
     text-align: center;
+    background-image: linear-gradient(rgba(107, 104, 104, 0.116),black);
 }
 .digits {
     display: flex;
     flex-wrap: wrap;
 }
 .digits button {
+    color: white;
     width: 25%;
     aspect-ratio: 1/1;
     font-size: 30px;
+    background-image: linear-gradient(rgba(107, 104, 104, 0.116),black);
 }
 
 @media only screen and (max-width: 600px) {
@@ -95,3 +100,14 @@ body {
         font-size: 20px;
     }
   }
+  a {
+    color: hotpink;
+  }
+  .topofbutton {
+    margin: 5px;
+    color: white;
+  }
+  button {
+    transition: all .2s ease-in-out;
+  }
+  button:hover { transform: scale(1.1);}
